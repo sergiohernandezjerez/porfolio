@@ -1,2 +1,2 @@
-# portfolio
-Portfolia sobre trabajos en HTML, CSS y JavaScript
+# porfolio
+Porfolio sobre trabajos en HTML, CSS y JavaScript
