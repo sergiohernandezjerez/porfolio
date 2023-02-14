@@ -5,7 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Envio de Emails</title>
-    <link rel="stylesheet" href="css/envioemail.css">
+    <link rel="stylesheet" href="dist/app.css">
+    <link rel="stylesheet" href="dist/spinner.css">
 </head>
 <body class="min-h-screen bg-slate-300">
     <div class="max-w-3xl mx-auto p-10">
@@ -15,6 +16,16 @@
                 <div class="flex flex-col space-y-2">
                     <label for="email" class="font-regular font-medium">Email:</label>
                     <input id="email" type="email" name="email" placeholder="Email Destino, ej: mkt@empresa.com" class="border border-gray-300 px-3 py-2 rounded-lg"  />
+                </div>
+
+                <div class="flex flex-col space-y-2">
+                    <div class="flex space-x-2">
+                        <label for="cc" class="font-regular font-medium" title="Con copia a: ">CC</label>
+                        <input type="checkbox" id="checkCC" name="checkCC" value="checkCC" class="ml-25" title="Con copia a: "/>
+                    </div>
+                    
+                    <input id="cc" type="email" name="cc" placeholder="CC, ej: mkt@empresa.com"
+                        class="hidden border border-gray-300 px-3 py-2 rounded-lg" title="Con copia a: "/>
                 </div>
 
                 <div class="flex flex-col space-y-2">
@@ -50,11 +61,22 @@
                     </button>
                 </div>           
             </form>
+            <div id="spinner" class="hidden justify-center mt-10">
+                <div class="sk-chase">
+                    <div class="sk-chase-dot"></div>
+                    <div class="sk-chase-dot"></div>
+                    <div class="sk-chase-dot"></div>
+                    <div class="sk-chase-dot"></div>
+                    <div class="sk-chase-dot"></div>
+                    <div class="sk-chase-dot"></div>
+                </div>
+            </div>
+
         </div>
     </div>
 
 
 
-    <script src="js/envioemail.js"></script>
+    <script src="js/app.js"></script>
 </body>
 </html>
